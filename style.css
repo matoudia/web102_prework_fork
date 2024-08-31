@@ -19,8 +19,22 @@ body {
     margin-top: -10px;
 }
 
-.stats-container {
+/*this one comes with the original file
+.stats-container1 {
     display: flex;
+}
+*/
+
+.stats-container {
+    display: flex;          /* Enables flexbox */
+    align-items: center;    /* Aligns items vertically to the center */
+    justify-content: space-between; /* Distributes items evenly with space between them */
+    /* Additional properties can be added based on layout needs */
+}
+
+.stats-container:hover {
+    cursor: pointer;                /* Changes the cursor to a pointer when hovering */
+    box-shadow: 0 0 30px lightblue; /* Adds a light blue shadow around the container on hover */
 }
 
 .stats-card {
