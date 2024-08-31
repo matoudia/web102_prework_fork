@@ -198,12 +198,39 @@ allBtn.addEventListener("click", showAllGames);
 const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
+// use filter() to get a list of games that have not yet met their goal
+let games_not_goal = GAMES_JSON.filter ( (game) => {
+
+    return game.pledged < game.goal;
+  
+});
+
+const number_unfunded_games = games_not_goal.reduce( (acc, game) => {
+    return acc + 1;
+}, 0);
+
+
 
 
 // create a string that explains the number of unfunded games using the ternary operator
-
+let displayStr = `A total of $${amountraised.toLocaleString('en-US')} has been raised for ${numberofgames} games. Currently, ${number_unfunded_games} games remain unfunded. We need your help to fund these amazing games! `;
 
 // create a new DOM element containing the template string and append it to the description container
+
+var text = document.createTextNode(displayStr);
+descriptionContainer.appendChild(text);
+
+/*
+descriptionContainer.textContent += 
+descriptionContainer.innerHTML = `
+            <p> A total of $${amountraised.toLocaleString('en-US')} has been raised for ${numberofgames} games. Currently, ${number_unfunded_games} games remain unfunded. We need your help to fund these amazing games! </p>
+            
+        `;  
+        
+        //another way
+        //<p> ${displayStr} </p>
+
+*/
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
@@ -218,8 +245,13 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
+const [first_game, second_game, ...rest] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+var text_top = document.createTextNode(first_game.name);
+firstGameContainer.appendChild(text_top)
 
 // do the same for the runner up item
+var text_runner = document.createTextNode(second_game.name);
+secondGameContainer.appendChild(text_runner)
 
