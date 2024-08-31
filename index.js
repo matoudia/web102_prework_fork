@@ -183,6 +183,7 @@ const unfundedBtn = document.getElementById("unfunded-btn");
 const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
 
+
 // add event listeners with the correct functions to each button
 unfundedBtn.addEventListener("click", filterUnfundedOnly);
 fundedBtn.addEventListener("click", filterFundedOnly);
@@ -255,3 +256,16 @@ firstGameContainer.appendChild(text_top)
 var text_runner = document.createTextNode(second_game.name);
 secondGameContainer.appendChild(text_runner)
 
+/*
+//Adding new feature
+const Video_Walkthrough = document.getElementById("Video-Walkthrough");
+
+
+var showGif = function showGif() {
+    Video_Walkthrough.style.display = "inline";
+    container.style.backgroundImage = "";
+  };
+
+  Video_Walkthrough.addEventListener("click", showAllGames);
+
+*/
