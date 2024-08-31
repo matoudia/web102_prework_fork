@@ -25,8 +25,8 @@ Here's a walkthrough of implemented features:
 
 <img src='./assets/web102prework.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Licecap GIF tool you used! -->
-GIF created with ...  
+Licecap GIF tool you used!
+GIF created with LICEcap 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -34,7 +34,8 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Describe any challenges encountered while building the app:
+
 My first obstacle was the "seafoam" response at challenge. I waist almost 60% of the time to find and it is still confusing for me
 and the other major is the git push.
 I got too many error mainly this one "error: remote origin already exists". i had to pull the repository before committing again and still need to review this section.
