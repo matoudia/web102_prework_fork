@@ -256,16 +256,45 @@ firstGameContainer.appendChild(text_top)
 var text_runner = document.createTextNode(second_game.name);
 secondGameContainer.appendChild(text_runner)
 
-/*
-//Adding new feature
-const Video_Walkthrough = document.getElementById("Video-Walkthrough");
+
+ //Adding new feature
+ // JavaScript to handle the button click
+ document.getElementById("openGifButton").addEventListener("click", function() {
+
+    
+             
+    // Create a new image element
+    var gifImage = document.createElement("img");
+    gifImage.src = "./assets/web102preworkgif.gif"; // Replace with your GIF URL
+    gifImage.alt = "GIF Image";
+
+    //var gifImage = document.getElementById("gifImage");       //if a img block exist already
+    //or getdivelement.appendChild(create image element) kinder document.body.appendChild(image element);
+
+        
+    //Replace the button with the image
+    //gifImage.style.display = "block";
+    //gifImage.style.width="300px";
+    //gifImage.style.height="250px";
+    //var button = document.getElementById("openGifButton");
+    //button.parentNode.replaceChild(gifImage, button);
+
+    var gifUrl=gifImage.getAttribute('src'); //or create it directly with url
+
+    //open a new window with the url
+    //window.open(gifUrl,'Image');
+    
+    // Open a new window with specific dimensions
+    var popupWindow = window.open("", "gifWindow", "width=800,height=600"); 
+
+    // Write HTML content to the new window
+    popupWindow.document.write('<html><head><title>GIF Image</title></head><body style="margin:0;padding:0;display:flex;justify-content:center;align-items:center;height:100%;background-color:#000;">');
+    popupWindow.document.write('<img src="' + gifUrl + '" alt="GIF Image" style="max-width:100%;max-height:100%;">');
+    popupWindow.document.write('</body></html>');
+
+    // Close the document to finish loading content
+    popupWindow.document.close();
 
 
-var showGif = function showGif() {
-    Video_Walkthrough.style.display = "inline";
-    container.style.backgroundImage = "";
-  };
 
-  Video_Walkthrough.addEventListener("click", showAllGames);
-
-*/
+});
