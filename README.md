@@ -23,7 +23,9 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='./assets/web102prework.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://github.com/matoudia/web102_prework_fork/blob/main/assets/web102preworkgif.gif
+
+<img src='./assets/web102preworkgif.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 Licecap GIF tool you used!
 GIF created with LICEcap 
